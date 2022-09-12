@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7714cab572.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+</head>
+
+<body>
+    <div class="w-full text-gray-700 top-0 left-0 right-0 bg-[#E6F0FF] fixed py-2 z-50" id="nav">
+        <div
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <a href="#"
+                    class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">Pox-Data</a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline hamburger"
+                    @click="open = !open">
+                    <span class="origin-top-left"></span>
+                    <span class="mt-1"></span>
+                    <span class="mt-1 origin-bottom-left"></span>
+                </button>
+            </div>
+            <nav class="flex nav-menu flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <a class="nav-item active" href="#hero">Home</a>
+                <a class="nav-item" href="#data">Data</a>
+                <a class="nav-item" href="#tentang">Tentang</a>
+                <a class="nav-item" href="#gejala">Gejala</a>
+                <a class="nav-item" href="#pencegahan">Pencegahan</a>
+            </nav>
+        </div>
+    </div>
+    <div class="page-1 bg-[#E6F0FF] scroll-mt-16" id="hero">
+        <div class="hero-section px-12 pt-24 lg:px-20">
+            <div class="flex flex-wrap md:px-12 items-center">
+                <div class="w-full lg:px-14 md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-semibold">Kenali Penyakit Monkey Pox</h2>
+                    <p class="font-medium mt-3 mb-5 leading-relaxed">Mari Kenali Apa Itu Monkey Pox, Gejala Serta
+                        Pencegahannya </p>
+                    <!-- <a href="#"
+                        class="px-3 py-2 text-white bg-sky-600 rounded-md hover:opacity-90 transition duration-150">Hubungi
+                        Saya</a> -->
+                </div>
+                <div class="w-full md:w-1/2 px-4 pb-10 lg:pb-0">
+                    <img src="assets/Virus-pana.svg" alt="" class="max-w-full mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-2 p-12 lg:px-28 md:py-24 scroll-mt-16" id="data">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div data-aos="fade-right" data-aos-anchor-placement="bottom-center">
+                <h3 class="text-2xl font-semibold">DataPox</h3>
+                <p class="text-gray-500 mt-3 md:mt-8">Lebih dari 50.000 orang telah terinfeksi virus MonkeyPox</p>
+            </div>
+            <div class="mt-10 md:mt-0 md:pr-10">
+                <h2 class="text-4xl font-semibold md:text-right data-penambahan"></h2>
+                <p class="text-gray-500 text-sm mt-2 md:text-base md:mt-5 md:text-right date-confirmation">Rata-rata
+                    penambahan kasus harian</p>
+                <h2 class="text-4xl font-semibold mt-6 md:text-right data-total"></h2>
+                <p class="text-gray-500 text-sm mt-2 md:text-base md:mt-5 md:text-right">Total Kasus</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-3 px-8 py-12 md:px-28 py-24 bg-[#C9F0D4] scroll-mt-16" id="tentang">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div>
+                <img src="assets/page3.svg" alt="" class="sm:w-[450px] mx-auto">
+            </div>
+            <div class="lg:pr-12 lg:w-1/2">
+                <div class="bg-white w-full p-8 md:px-10 py-8 rounded-xl mt-10">
+                    <h2 class="text-3xl md:text-5xl font-semibold">Apa Itu MonkeyPox?</h2>
+                    <p class="text-gray-500 mt-5 ">Penyakit cacar monyet atau monkeypox adalah penyakit infeksi akibat
+                        MonkeyPox Virus (MPXV) yang termasuk dalam genus Orthopoxvirus, bagian dari keluarga Poxviridae
+                        yang mirip dengan virus penyebab smallpox.</p>
+                    <p class="text-gray-500 mt-1">Pada tahun 2022 ini, wabah cacar monyet telah menyebar luas hingga ke
+                        berbagai negara sehingga organisasi kesehatan dunia (WHO) menetapkan statusnya sebagai darurat
+                        kesehatan global. Penyakit ini ditularkan melalui kontak fisik dengan penderita atau hewan yang
+                        membawa virus tersebut.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-4 p-12 md:px-28 md:py-24 bg-white scroll-mt-16" id="gejala">
+        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center">Gejala Monkey Pox</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 grid-rows md:mt-16 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-xl">
+                <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
+                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
+                <img src="assets/v2/headache.png" class="mb-2" alt="">
+                <h4 class="text-2xl text-center">Sakit Kepala</h4>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl">
+                <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
+                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
+                <img src="assets/v2/infection.png" class="mb-2" alt="">
+                <h4 class="text-2xl text-center">Limfadenopati</h4>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl">
+                <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
+                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
+                <img src="assets/v2/muscle-pain.png" class="mb-2" alt="">
+                <h4 class="text-2xl text-center">Nyeri Otot</h4>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl">
+                <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
+                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331  -->
+                <img src="assets/v2/skin-rash.png" class="mb-2" alt="">
+                <h4 class="text-2xl text-center">Ruam & Bintik-bintik</h4>
+            </div>
+        </div>
+    </div>
+    <div class="page-5 p-12 lg:py-24 bg-[#EAD8F5] scroll-mt-16">
+        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" id="pencegahan">Pencegahan</h2>
+        <div class="md:px-10 pt-6">
+            <div class="flex grid md:grid-cols-2 lg:grid-cols-3 grid-rows justify-center md:mt-10 lg:mt-16 gap-8">
+                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl">
+                    <div class="header flex items-center gap-x-2">
+                        <div class="small-card bg-[#D9D9D9] px-5 py-4 rounded-xl">
+                            <i class="fa-solid fa-paw fa-3x"></i>
+                        </div>
+                        <h5 class="text-2xl font-semibold text-center">Hindari Kontak Hewan</h5>
+                    </div>
+                    <div class="body mt-6">
+                        <p class="text-gray-500">Hindari kontak dengan hewan yang dapat menjadi sarang virus,
+                            terutama hewan buas, tikus, primata, hewan yang sakit, atau yang ditemukan mati.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl">
+                    <div class="header flex items-center gap-x-2">
+                        <div class="small-card bg-white px-5 py-4 rounded-xl">
+                            <i class="fa-solid text-[#6B9CF8] fa-handshake-simple fa-3x"></i>
+                        </div>
+                        <h5 class="text-2xl text-white font-semibold text-center">Hindari Kontak Fisik</h5>
+                    </div>
+                    <div class="body mt-6">
+                        <p class="text-white">Hindari kontak fisik dengan orang yang terinfeksi atau material yang
+                            terkontaminasi. Misalnya dari tempat tidur maupun pakaian yang digunakan penderita.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl">
+                    <div class="header flex items-center gap-x-2">
+                        <div class="small-card bg-[#D9D9D9] px-5 py-4 rounded-xl">
+                            <i class="fa-solid fa-drumstick-bite fa-3x"></i>
+                        </div>
+                        <h5 class="text-2xl font-semibold text-center">Makanan Mentah</h5>
+                    </div>
+                    <div class="body mt-6">
+                        <p class="text-gray-500">Batasi konsumsi dengan darah atau daging yang tidak dimasak dengan
+                            baik, maupun daging yang diburu dari hewan liar (bush meat)
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl">
+                    <div class="header flex items-center gap-x-2">
+                        <div class="small-card bg-white px-5 py-4 rounded-xl">
+                            <i class="fa-solid text-[#6B9CF8] fa-hands-bubbles fa-3x"></i>
+                        </div>
+                        <h5 class="text-2xl text-white font-semibold text-center">Hidup Sehat</h5>
+                    </div>
+                    <div class="body mt-6">
+                        <p class="text-white">Terapkan perilaku hidup bersih dan sehat. Lakukan kebersihan tangan
+                            yang baik setelah kontak dengan hewan atau manusia yang terinfeksi. Misalnya, mencuci
+                            tangan dengan sabun dan air atau menggunakan pembersih tangan berbasis alkohol.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl">
+                    <div class="header flex items-center gap-x-2">
+                        <div class="small-card bg-[#D9D9D9] px-5 py-4 rounded-xl">
+                            <i class="fa-solid fa-mask-face fa-3x"></i>
+                        </div>
+                        <h5 class="text-2xl font-semibold text-center">Gunakan APD</h5>
+                    </div>
+                    <div class="body mt-6">
+                        <p class="text-gray-500">
+                            Gunakan alat pelindung diri (APD) atau masker saat merawat orang yang sedang sakit.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl">
+                    <div class="header flex items-center gap-x-2">
+                        <div class="small-card bg-white px-5 py-4 rounded-xl">
+                            <i class="fa-solid text-[#6B9CF8] fa-plane fa-3x"></i>
+                        </div>
+                        <h5 class="text-2xl text-white font-semibold text-center">Hindari Pergi ke Daerah Wabah</h5>
+                    </div>
+                    <div class="body mt-6">
+                        <p class="text-white">Menghindari bepergian ke daerah atau negara dengan jumlah kasus cacar
+                            monyet yang tinggi untuk mencegah penularan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-5">
+        <div class="flex justify-between px-28 pb-10">
+            <h2 class="font-extrabold text-xl mt-6">VirtualEnv</h2>
+            <p class="font-normal text-sm text-gray-500 mt-6">Copyright 2022 , All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+
+        // Nav Item
+        const nav_items = document.querySelectorAll('.nav-item')
+        nav_items.forEach(function (el) {
+            el.addEventListener('click', function () {
+                nav_items.forEach(function (element) {
+                    element.classList.remove('active')
+                })
+                this.classList.add('active')
+            })
+        })
+        // window.onscroll = function () {
+        //     nav_items.forEach( function(el) {
+        //         const section = document.querySelector(el.getAttribute('href'))
+        //         if (section.offsetTop >= 0) {
+        //             nav_items.forEach( function(element) {
+        //                 element.classList.remove('active')
+        //             })
+        //             el.classList.add('active')
+        //         }
+        //     })
+        // }
+
+        // Responsive Navbar
+        const hamburger = document.querySelector('.hamburger')
+        hamburger.addEventListener('click', function (event) {
+            hamburger.classList.toggle('hamburger-active')
+            const navMenu = document.querySelector('.nav-menu')
+            navMenu.classList.toggle('hidden')
+            document.getElementById('nav').classList.toggle('shadow')
+        })
+
+        // Function untuk menambah titik pada angka ribuan
+        function addDots(nStr) {
+            nStr += '';
+            x = nStr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + '.' + '$2'); // changed comma to dot here
+            }
+            return x1 + x2;
+        }
+
+        // Mengambil data kasus monkeypox
+        const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+        fetch('https://raw.githubusercontent.com/ZakariaBouguira/MonkeyPox/master/monkeypox_today.json')
+            .then(result => result.json())
+            .then(result => {
+                let data = JSON.parse(localStorage.getItem('data-kasus'))
+                if (data == null) {
+                    localStorage.setItem('data-kasus', JSON.stringify(result[0]))
+                    data = result[0]
+                }
+                const date = new Date(data.Date_confirmation)
+                const str_date = `Penambahan kasus per tanggal ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
+                changeDataView(addDots(data.New_infected), addDots(data.Total_infected), str_date)
+            })
+            .catch(err => {
+                let data = JSON.parse(localStorage.getItem('data-kasus'))
+                if (data !== null) {
+                    const date = new Date(data.Date_confirmation)
+                    const str_date = `Penambahan kasus per tanggal ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
+                    changeDataView(addDots(data.New_infected), addDots(data.Total_infected), str_date)
+                } else {
+                    changeDataView('0+', '50.000+', 'Rata-rata penambahan kasus harian')
+                }
+            })
+
+        function changeDataView(new_infected, total_infected, str_date) {
+            document.querySelector('.data-penambahan').innerHTML = new_infected
+            document.querySelector('.data-total').innerHTML = total_infected
+            document.querySelector('.date-confirmation').innerHTML = str_date
+        }
+    </script>
+</body>
+
+</html>
