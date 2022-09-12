@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
         integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="node_modules/aos/dist/aos.js"></script>
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
 </head>
 
@@ -41,9 +40,9 @@
         </div>
     </div>
     <div class="page-1 bg-[#E6F0FF] scroll-mt-16" id="hero">
-        <div class="hero-section px-12 pt-24 lg:px-20">
+        <div class="hero-section px-12 pt-20 lg:pt-16 lg:px-20">
             <div class="flex flex-wrap md:px-12 items-center">
-                <div class="w-full lg:px-14 md:w-1/2">
+                <div class="w-full lg:px-14 md:w-1/2" data-aos="fade-right" data-aos-delay="300">
                     <h2 class="text-4xl md:text-5xl font-semibold">Kenali Penyakit Monkey Pox</h2>
                     <p class="font-medium mt-3 mb-5 leading-relaxed">Mari Kenali Apa Itu Monkey Pox, Gejala Serta
                         Pencegahannya </p>
@@ -51,7 +50,7 @@
                         class="px-3 py-2 text-white bg-sky-600 rounded-md hover:opacity-90 transition duration-150">Hubungi
                         Saya</a> -->
                 </div>
-                <div class="w-full md:w-1/2 px-4 pb-10 lg:pb-0">
+                <div class="w-full md:w-1/2 px-4 pb-10 lg:pb-0" data-aos="fade-left" data-aos-delay="450">
                     <img src="assets/Virus-pana.svg" alt="" class="max-w-full mx-auto">
                 </div>
             </div>
@@ -59,11 +58,11 @@
     </div>
     <div class="page-2 p-12 lg:px-28 md:py-24 scroll-mt-16" id="data">
         <div class="flex flex-col md:flex-row justify-between">
-            <div data-aos="fade-right" data-aos-anchor-placement="bottom-center">
+            <div data-aos="fade-right">
                 <h3 class="text-2xl font-semibold">DataPox</h3>
                 <p class="text-gray-500 mt-3 md:mt-8">Lebih dari 50.000 orang telah terinfeksi virus MonkeyPox</p>
             </div>
-            <div class="mt-10 md:mt-0 md:pr-10">
+            <div class="mt-10 md:mt-0 md:pr-10" data-aos="fade-left" data-aos-delay="150">
                 <h2 class="text-4xl font-semibold md:text-right data-penambahan"></h2>
                 <p class="text-gray-500 text-sm mt-2 md:text-base md:mt-5 md:text-right date-confirmation">Rata-rata
                     penambahan kasus harian</p>
@@ -72,12 +71,13 @@
             </div>
         </div>
     </div>
-    <div class="page-3 px-8 py-12 md:px-28 py-24 bg-[#C9F0D4] scroll-mt-16" id="tentang">
+    <!-- #C9F0D4 -->
+    <div class="page-3 px-8 py-12 md:px-28 py-24 bg-[#E6F0FF] scroll-mt-16" id="tentang">
         <div class="flex flex-col lg:flex-row justify-between">
-            <div>
+            <div data-aos="fade-right" data-aos-offset="300">
                 <img src="assets/page3.svg" alt="" class="sm:w-[450px] mx-auto">
             </div>
-            <div class="lg:pr-12 lg:w-1/2">
+            <div class="lg:pr-12 lg:w-1/2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="300">
                 <div class="bg-white w-full p-8 md:px-10 py-8 rounded-xl mt-10">
                     <h2 class="text-3xl md:text-5xl font-semibold">Apa Itu MonkeyPox?</h2>
                     <p class="text-gray-500 mt-5 ">Penyakit cacar monyet atau monkeypox adalah penyakit infeksi akibat
@@ -92,27 +92,27 @@
         </div>
     </div>
     <div class="page-4 p-12 md:px-28 md:py-24 bg-white scroll-mt-16" id="gejala">
-        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center">Gejala Monkey Pox</h2>
+        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" data-aos="zoom-in">Gejala Monkey Pox</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 grid-rows md:mt-16 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down">
                 <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
                 <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
                 <img src="assets/v2/headache.png" class="mb-2" alt="">
                 <h4 class="text-2xl text-center">Sakit Kepala</h4>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="150">
                 <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
                 <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
                 <img src="assets/v2/infection.png" class="mb-2" alt="">
                 <h4 class="text-2xl text-center">Limfadenopati</h4>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="300">
                 <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
                 <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
                 <img src="assets/v2/muscle-pain.png" class="mb-2" alt="">
                 <h4 class="text-2xl text-center">Nyeri Otot</h4>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="450">
                 <!-- https://www.flaticon.com/packs/monkeypox-5?word=monkeypox -->
                 <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331  -->
                 <img src="assets/v2/skin-rash.png" class="mb-2" alt="">
@@ -120,11 +120,12 @@
             </div>
         </div>
     </div>
-    <div class="page-5 p-12 lg:py-24 bg-[#EAD8F5] scroll-mt-16">
-        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" id="pencegahan">Pencegahan</h2>
+    <!-- #EAD8F5 -->
+    <div class="page-5 p-12 lg:py-24 bg-[#E6F0FF] scroll-mt-16">
+        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" id="pencegahan" data-aos="zoom-in">Pencegahan</h2>
         <div class="md:px-10 pt-6">
             <div class="flex grid md:grid-cols-2 lg:grid-cols-3 grid-rows justify-center md:mt-10 lg:mt-16 gap-8">
-                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl">
+                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down">
                     <div class="header flex items-center gap-x-2">
                         <div class="small-card bg-[#D9D9D9] px-5 py-4 rounded-xl">
                             <i class="fa-solid fa-paw fa-3x"></i>
@@ -137,7 +138,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl">
+                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="150">
                     <div class="header flex items-center gap-x-2">
                         <div class="small-card bg-white px-5 py-4 rounded-xl">
                             <i class="fa-solid text-[#6B9CF8] fa-handshake-simple fa-3x"></i>
@@ -150,7 +151,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl">
+                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="300">
                     <div class="header flex items-center gap-x-2">
                         <div class="small-card bg-[#D9D9D9] px-5 py-4 rounded-xl">
                             <i class="fa-solid fa-drumstick-bite fa-3x"></i>
@@ -163,7 +164,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl">
+                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="450">
                     <div class="header flex items-center gap-x-2">
                         <div class="small-card bg-white px-5 py-4 rounded-xl">
                             <i class="fa-solid text-[#6B9CF8] fa-hands-bubbles fa-3x"></i>
@@ -177,7 +178,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl">
+                <div class="bg-white px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="600">
                     <div class="header flex items-center gap-x-2">
                         <div class="small-card bg-[#D9D9D9] px-5 py-4 rounded-xl">
                             <i class="fa-solid fa-mask-face fa-3x"></i>
@@ -190,7 +191,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl">
+                <div class="bg-[#6B9CF8] px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="750">
                     <div class="header flex items-center gap-x-2">
                         <div class="small-card bg-white px-5 py-4 rounded-xl">
                             <i class="fa-solid text-[#6B9CF8] fa-plane fa-3x"></i>
@@ -207,13 +208,16 @@
         </div>
     </div>
     <footer class="mt-5">
-        <div class="flex justify-between px-28 pb-10">
-            <h2 class="font-extrabold text-xl mt-6">VirtualEnv</h2>
-            <p class="font-normal text-sm text-gray-500 mt-6">Copyright 2022 , All rights reserved</p>
+        <div class="flex justify-between items-center px-28 pb-10">
+            <a href="https://github.com/madeaditya02/pox-data" class="font-extrabold fa-2x mt-6"><i class="fa-brands fa-github" data-aos="fade-right" data-aos-once="true"></i></a>
+            <p class="font-normal text-sm text-gray-500 mt-6" data-aos="fade-left" data-aos-delay="150" data-aos-once="true">Copyright 2022 , All rights reserved</p>
         </div>
     </footer>
+    <script src="node_modules/aos/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 700
+        })
 
         // Nav Item
         const nav_items = document.querySelectorAll('.nav-item')
