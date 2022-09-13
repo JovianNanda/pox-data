@@ -30,7 +30,7 @@
                     <span class="mt-1 origin-bottom-left"></span>
                 </button>
             </div>
-            <nav class="flex nav-menu flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <nav class="flex nav-menu flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
                 <a class="nav-item active" href="#hero">Home</a>
                 <a class="nav-item" href="#data">Data</a>
                 <a class="nav-item" href="#tentang">Tentang</a>
@@ -39,7 +39,7 @@
             </nav>
         </div>
     </div>
-    <div class="page-1 bg-[#E6F0FF] scroll-mt-16" id="hero">
+    <div class="page-1 bg-[#E6F0FF] scroll-mt-16 pb-14" id="hero">
         <div class="hero-section px-12 pt-20 lg:pt-16 lg:px-20">
             <div class="flex flex-wrap md:px-12 items-center">
                 <div class="w-full lg:px-14 md:w-1/2" data-aos="fade-right" data-aos-delay="300">
@@ -72,7 +72,7 @@
         </div>
     </div>
     <!-- #C9F0D4 -->
-    <div class="page-3 px-8 py-12 md:px-28 py-24 bg-[#E6F0FF] scroll-mt-16" id="tentang">
+    <div class="page-3 px-8 py-12 md:px-28 py-28 bg-[#E6F0FF] scroll-mt-16" id="tentang">
         <div class="flex flex-col lg:flex-row justify-between">
             <div data-aos="fade-right" data-aos-offset="300">
                 <img src="assets/page3.svg" alt="" class="sm:w-[450px] mx-auto">
@@ -91,7 +91,7 @@
             </div>
         </div>
     </div>
-    <div class="page-4 p-12 md:px-28 md:py-24 bg-white scroll-mt-16" id="gejala">
+    <div class="page-4 p-12 md:px-28 md:py-28 bg-white scroll-mt-16" id="gejala">
         <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" data-aos="zoom-in">Gejala Monkey Pox</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 grid-rows md:mt-16 gap-6">
             <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down">
@@ -122,7 +122,8 @@
     </div>
     <!-- #EAD8F5 -->
     <div class="page-5 p-12 lg:py-24 bg-[#E6F0FF] scroll-mt-16">
-        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" id="pencegahan" data-aos="zoom-in">Pencegahan</h2>
+        <h2 class="text-3xl md:text-4xl md:text-5xl font-semibold text-center" id="pencegahan" data-aos="zoom-in">
+            Pencegahan</h2>
         <div class="md:px-10 pt-6">
             <div class="flex grid md:grid-cols-2 lg:grid-cols-3 grid-rows justify-center md:mt-10 lg:mt-16 gap-8">
                 <div class="bg-white px-6 py-6 rounded-2xl shadow-xl" data-aos="fade-down">
@@ -207,10 +208,28 @@
             </div>
         </div>
     </div>
+    <div class="bg-modal w-full h-full bg-[#000000b3] top-0 z-50 fixed justify-center items-center hidden">
+        <div class="mx-10 modal-content w-[700px] h-fit bg-white rounded-2xl px-8 py-8 text-center">
+            <div class="exit-btn flex justify-end">
+                <button class="rounded-lg focus:outline-none focus:shadow-outline hamburger hamburger-active">
+                    <span class="origin-top-left"></span>
+                    <span class="mt-1"></span>
+                    <span class="mt-1 origin-bottom-left"></span>
+                </button>
+
+            </div>
+            <i class='fa-solid fa-circle-info fa-3x text-blue-600 mb-5'></i>
+            <p class="text-xl">Sakit kepala adalah rasa sakit atau nyeri di kepala yang bisa muncul secara bertahap atau
+                mendadak. Nyeri
+                akibat sakit kepala dapat muncul di salah satu sisi kepala, terpusat di titik tertentu, atau menyebar
+                hingga ke seluruh bagian kepala.</p>
+        </div>
+    </div>
     <footer class="mt-5">
         <div class="flex justify-between items-center px-28 pb-10">
-            <a href="https://github.com/madeaditya02/pox-data" class="font-extrabold fa-2x mt-6"><i class="fa-brands fa-github" data-aos="fade-right" data-aos-once="true"></i></a>
-            <p class="font-normal text-sm text-gray-500 mt-6" data-aos="fade-left" data-aos-delay="150" data-aos-once="true">Copyright 2022 , All rights reserved</p>
+            <a href="https://github.com/madeaditya02/pox-data" class="font-extrabold fa-2x mt-6"><i
+                    class="fa-brands fa-github"></i></a>
+            <p class="font-normal text-sm text-gray-500 mt-6">Copyright 2022 , All rights reserved</p>
         </div>
     </footer>
     <script src="node_modules/aos/dist/aos.js"></script>
@@ -218,6 +237,7 @@
         AOS.init({
             duration: 700
         })
+        // scroll check
 
         // Nav Item
         const nav_items = document.querySelectorAll('.nav-item')
@@ -240,7 +260,12 @@
         //         }
         //     })
         // }
-
+        // Modal
+        const exitmodal = document.querySelector('.exit-btn')
+        const modal = document.querySelector('.bg-modal')
+        exitmodal.addEventListener('click', function (event) {
+            modal.classList.toggle('hidden');
+        })
         // Responsive Navbar
         const hamburger = document.querySelector('.hamburger')
         hamburger.addEventListener('click', function (event) {
