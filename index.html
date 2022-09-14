@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tailwind.css">
-    <title>Document</title>
+    <title>Pox-Data</title>
     <script src="https://kit.fontawesome.com/7714cab572.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,14 +23,13 @@
             <div class="p-4 flex flex-row items-center justify-between">
                 <a href="#"
                     class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">Pox-Data</a>
-                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline hamburger"
-                    @click="open = !open">
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline hamburger">
                     <span class="origin-top-left"></span>
                     <span class="mt-1"></span>
                     <span class="mt-1 origin-bottom-left"></span>
                 </button>
             </div>
-            <nav class="flex nav-menu flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+            <nav class="hidden flex nav-menu flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row ">
                 <a class="nav-item active" href="#hero">Home</a>
                 <a class="nav-item" href="#data">Data</a>
                 <a class="nav-item" href="#tentang">Tentang</a>
@@ -94,36 +93,33 @@
     <div class="page-4 p-12 md:px-28 md:py-28 bg-white scroll-mt-16" id="gejala">
         <h2 class="text-3xl md:text-4xl font-semibold text-center" data-aos="zoom-in">Gejala Monkey Pox</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 grid-rows md:mt-16 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down">
-                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
-                <button class="modal-btn" target-modal="sakit-kepala">
+            <div data-aos="fade-down">
+                <div class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer modal-btn " target-modal="sakit-kepala">
+                    <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
                     <img src="assets/v2/headache.png" class="mb-2" alt="">
                     <h4 class="text-2xl text-center">Sakit Kepala</h4>
-                </button>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="150">
-                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
-                <button class="modal-btn" target-modal="limfadenopati">
+            <div data-aos="fade-down" data-aos-delay="150">
+                <div class="bg-white p-6 rounded-2xl shadow-lg modal-btn cursor-pointer" target-modal="limfadenopati">
+                    <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
                     <img src="assets/v2/infection.png" class="mb-2" alt="">
                     <h4 class="text-2xl text-center">Limfadenopati</h4>
-                </button>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="300">
-                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
-                <button class="modal-btn" target-modal="nyeri-otot">
+            <div data-aos="fade-down" data-aos-delay="300">
+                <div class="bg-white p-6 rounded-2xl shadow-lg modal-btn cursor-pointer" target-modal="nyeri-otot">
+                    <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331 -->
                     <img src="assets/v2/muscle-pain.png" class="mb-2" alt="">
                     <h4 class="text-2xl text-center">Nyeri Otot</h4>
-                </button>
-
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-xl" data-aos="fade-down" data-aos-delay="450"
-                target-modal="ruam">
-                <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331  -->
-                <button class="modal-btn" target-modal="ruam">
+            <div data-aos="fade-down" data-aos-delay="450">
+                <div class="bg-white p-6 rounded-2xl shadow-lg modal-btn cursor-pointer" target-modal="ruam">
+                    <!-- https://www.flaticon.com/packs/monkeypox-2?word=monkeypox&style_id=1222&family_id=333&group_id=331  -->
                     <img src=" assets/v2/skin-rash.png" class="mb-2" alt="">
-                    <h4 class="text-2xl text-center">Ruam & Bintik-bintik</h4>
-                </button>
-
+                    <h4 class="text-2xl text-center">Ruam</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -216,7 +212,7 @@
         </div>
     </div>
     <div class="bg-modal w-full h-full bg-[#000000b3] top-0 z-50 justify-center items-center fixed hidden">
-        <div class="mx-10 modal-content w-[700px] h-fit bg-white rounded-2xl px-8 py-8 text-center">
+        <div class="mx-10 modal-content w-[700px] bg-white rounded-2xl px-8 py-8 text-center">
             <div class="flex justify-end">
                 <button class="exit-btn rounded-lg focus:outline-none focus:shadow-outline hamburger hamburger-active">
                     <span class="origin-top-left"></span>
@@ -226,21 +222,25 @@
 
             </div>
             <i class='fa-solid fa-circle-info fa-3x text-blue-600 mb-5'></i>
-            <p class="text-modal text-xl hidden" data-modal="sakit-kepala">Sakit kepala adalah rasa sakit atau nyeri di
+            <p class="text-modal text-xl hidden" data-modal="sakit-kepala">Sakit kepala adalah rasa sakit atau nyeri
+                di
                 kepala yang
                 bisa
                 muncul secara bertahap atau
                 mendadak. Nyeri
-                akibat sakit kepala dapat muncul di salah satu sisi kepala, terpusat di titik tertentu, atau menyebar
+                akibat sakit kepala dapat muncul di salah satu sisi kepala, terpusat di titik tertentu, atau
+                menyebar
                 hingga ke seluruh bagian kepala.</p>
             <p class="text-modal text-xl hidden" data-modal="limfadenopati">Limfadenopati adalah pembengkakan atau
-                pembesaran kelenjar getah bening. Limfadenopati bukan merupakan sebuah penyakit, melainkan gejala dari
+                pembesaran kelenjar getah bening. Limfadenopati bukan merupakan sebuah penyakit, melainkan gejala
+                dari
                 kondisi atau penyakit lain.</p>
             <p class="text-modal text-xl hidden" data-modal="nyeri-otot">Nyeri otot adalah kondisi yang seringkali
                 Ketegangan bisa
                 terjadi pada satu atau beberapa otot di area tubuh.</p>
             <p class="text-modal text-xl hidden" data-modal="ruam">Muncul ruam berupa bercak kemerahan dimulai dari
-                wajah, lalu menyebar ke bagian tubuh lain seperti telapak tangan, telapak kaki, selaput mulut, sekitar
+                wajah, lalu menyebar ke bagian tubuh lain seperti telapak tangan, telapak kaki, selaput mulut,
+                sekitar
                 alat kelamin, atau selaput mata. Ruam atau lesi kemerahan berkembang menjadi bintik-bintik kemerahan
                 melenting berisi cairan</p>
         </div>
@@ -259,7 +259,6 @@
         AOS.init({
             duration: 700
         })
-        // scroll check
 
         // Nav Item
         const nav_items = document.querySelectorAll('.nav-item')
@@ -271,43 +270,32 @@
                 this.classList.add('active')
             })
         })
-        // window.onscroll = function () {
-        //     nav_items.forEach( function(el) {
-        //         const section = document.querySelector(el.getAttribute('href'))
-        //         if (section.offsetTop >= 0) {
-        //             nav_items.forEach( function(element) {
-        //                 element.classList.remove('active')
-        //             })
-        //             el.classList.add('active')
-        //         }
-        //     })
-        // }
-        // Modal
-        const modalBtn = $('.modal-btn')
-        const exitmodal = $('.exit-btn')
-        const modalWrap = $('.bg-modal')
 
-        modalBtn.on('click', function () {
-            const thisTargetModal = $(this).attr('target-modal')
-            modalWrap.toggleClass('hidden')
-            modalWrap.addClass('flex');
-            $('html, body').css({
-                overflow: 'hidden'
-            });
-            if ($(".text-modal").find("[data-modal='" + thisTargetModal + "']")) {
-                $(".text-modal[data-modal=" + thisTargetModal + "]").removeClass("hidden")
-            }
-        })
-        exitmodal.on('click', function () {
-            modalWrap.toggleClass('hidden');
-            modalWrap.removeClass('flex');
-            $('html, body').css({
-                overflow: 'auto',
-                height: 'auto'
-            });
-            $(".text-modal").addClass("hidden")
-        })
+        // Logic Modal
+        const modalBtn = document.querySelectorAll('.modal-btn')
+        const exitmodal = document.querySelector('.exit-btn')
+        const modalWrap = document.querySelector('.bg-modal')
+        const modalContent = document.querySelector(".bg-modal")
 
+        modalBtn.forEach(element => {
+            element.addEventListener('click', function () {
+                const thisTargetModal = element.getAttribute('target-modal')
+                modalWrap.classList.toggle('hidden')
+                modalWrap.classList.add('flex')
+                document.getElementsByTagName('html')[0].style.overflow = "hidden";
+                document.querySelector("[data-modal='" + thisTargetModal + "']").classList.remove("hidden")
+            })
+
+        })
+        // Untuk Exit modal
+        exitmodal.addEventListener('click', function () {
+            modalWrap.classList.toggle('hidden')
+            modalWrap.classList.remove('flex')
+            document.getElementsByTagName('html')[0].style.overflow = "auto";
+            document.querySelectorAll(".text-modal").forEach(element => {
+                element.classList.add("hidden")
+            })
+        })
 
 
         // Responsive Navbar
