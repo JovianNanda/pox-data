@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
-
 .hamburger > span {
   @apply bg-black h-[2.5px] w-[20px] block transition duration-200;
 }
