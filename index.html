@@ -78,13 +78,20 @@
             </div>
             <div class="lg:pr-12 lg:w-1/2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="300">
                 <div class="bg-white w-full p-8 md:px-10 py-8 rounded-xl mt-10">
-                    <h2 class="text-3xl md:text-5xl font-semibold">Apa Itu MonkeyPox?</h2>
-                    <p class="text-gray-500 mt-5 ">Penyakit cacar monyet atau monkeypox adalah penyakit infeksi akibat
-                        MonkeyPox Virus (MPXV) yang termasuk dalam genus Orthopoxvirus, bagian dari keluarga Poxviridae
+                    <h2 class="text-3xl md:text-5xl ">Apa Itu MonkeyPox?</h2>
+                    <p class="text-gray-500 mt-5 leading-8">Penyakit cacar monyet atau monkeypox adalah penyakit
+                        infeksi
+                        akibat
+                        MonkeyPox Virus (MPXV) yang termasuk dalam genus Orthopoxvirus, bagian dari keluarga
+                        Poxviridae
                         yang mirip dengan virus penyebab smallpox.</p>
-                    <p class="text-gray-500 mt-1">Pada tahun 2022 ini, wabah cacar monyet telah menyebar luas hingga ke
-                        berbagai negara sehingga organisasi kesehatan dunia (WHO) menetapkan statusnya sebagai darurat
-                        kesehatan global. Penyakit ini ditularkan melalui kontak fisik dengan penderita atau hewan yang
+                    <p class="text-gray-500 mt-1 leading-8">Pada tahun 2022 ini, wabah cacar monyet telah menyebar luas
+                        hingga
+                        ke
+                        berbagai negara sehingga organisasi kesehatan dunia (WHO) menetapkan statusnya sebagai
+                        darurat
+                        kesehatan global. Penyakit ini ditularkan melalui kontak fisik dengan penderita atau hewan
+                        yang
                         membawa virus tersebut.</p>
                 </div>
             </div>
@@ -322,7 +329,7 @@
 
         // Mengambil data kasus monkeypox
         const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
-        fetch('https://raw.githubusercontent.com/ZakariaBouguira/MonkeyPox/master/monkeypox_today.json')
+        fetch('https://raw.githubusercontent.com/ZakariaBouguira/MonkeyPox/master/monkeypox_today.json  ')
             .then(result => result.json())
             .then(result => {
                 let data = JSON.parse(localStorage.getItem('data-kasus'))
