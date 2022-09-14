@@ -26,3 +26,6 @@ body {
 .nav-item.active {
   @apply text-blue-500;
 }
+.modal-btn {
+  @apply transition duration-200 hover:shadow-2xl hover:scale-105;
+}
